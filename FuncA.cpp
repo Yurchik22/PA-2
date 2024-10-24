@@ -4,6 +4,12 @@
 FuncA::FuncA(){
 }
 
-double FuncA::Calculate(){
-return std::sin(2*3.14);
+double FuncA::Calculate(double x, int terms){
+ double sum = 0.0;
+    for (int n = 0; n < terms; ++n) {
+        double numerator = pow(-1, n) * tgamma(2 * n + 1);
+        double denominator = (1 - 2 * n) * pow(4, n) * pow(x, n);
+        sum += numerator / denominator;
+    }
+    return sum;
 }
