@@ -14,8 +14,7 @@ FuncA funcA;
         return 1;
     }
 
-    std::cout << "Введіть кількість членів ряду для обчислення: ";
-    std::cin >> terms;
+    terms = 3;
 
     double result = funcA.Calculate(x, terms);
 
