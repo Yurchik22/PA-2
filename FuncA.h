@@ -6,7 +6,7 @@ class FuncA{
 	FuncA();
 	virtual ~FuncA() {}
 
-	double Calculate();
+	double Calculate(double x, int terms);
 };
 
 #endif
